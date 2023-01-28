@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<header class="page-header-ui page-header-light py-lg-5 bg-gradient-primary-to-secondary">
+    <div class="page-header-ui-content mt-10">
+        <div class="container px-5">
+            <div class="text-center mb-5">
+                <h1 class="section-heading text-uppercase text-white">Contactez-Nous</h1>
+                <h2 class="section-subheading text-muted">Posez-nous toutes vos questions, on vous répond !</h2>
+            </div>
+            <div class="row gx-5 align-items-center">
+                <div class="col-lg-4 d-none d-lg-block"><img class="img-fluid" src="{% static 'assets/img/logos/Aliyo_logo_White.png' %}" /></div>
+                <div class="col-lg-8">
+                    <form id="contactForm" action="{% url 'contact:contact' %}" method="post">
+                    {% csrf_token %}
+                    <div class="row align-items-stretch mb-5">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <!-- Name input-->
+                                <input class="form-control" id="name" type="text" placeholder="Votre Nom *" name="name" required/>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <!-- Email address input-->
+                                <input class="form-control" id="email" type="email" placeholder="Votre Email *" name="email" required/>
+                            </div>
+                        </div>   
+                    </div>
+                    <div class="row align-items-stretch mb-5">
+                        <div class="form-group form-group-textarea">
+                            <!-- Message input-->
+                            <textarea class="form-control" id="message" placeholder="Votre message *" name="message" required></textarea>
+                        </div>
+                    </div>
+                    <!-- Submit Button-->
+                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase" id="submitButton" type="submit">Envoyer</button></div>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="svg-border-rounded text-white">
+        <!-- Rounded SVG Border-->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.54 17.34" preserveAspectRatio="none" fill="currentColor"><path d="M144.54,17.34H0V0H144.54ZM0,0S32.36,17.34,72.27,17.34,144.54,0,144.54,0"></path></svg>
+    </div>
+</header>
+{% endblock %}
