@@ -20317,8 +20317,23 @@ section {
     -webkit-clip-path: inset(2rem);
             clip-path: inset(2rem);
   }
-  .portfolio-item:hover .caption {
-    background-color: rgba(8, 80, 87, 0.9);
+  .portfolio-item:hover .caption1 {
+    background-color: rgba(51, 73, 133, 0.9);
+    -webkit-clip-path: inset(2rem);
+            clip-path: inset(2rem);
+  }
+  .portfolio-item:hover .caption2 {
+    background-color: rgba(24, 40, 32, 0.9);
+    -webkit-clip-path: inset(2rem);
+            clip-path: inset(2rem);
+  }
+  .portfolio-item:hover .caption3 {
+    background-color: rgba(51, 12, 24, 0.9);
+    -webkit-clip-path: inset(2rem);
+            clip-path: inset(2rem);
+  }
+  .portfolio-item:hover .caption4 {
+    background-color: rgba(221, 135, 13, 0.9);
     -webkit-clip-path: inset(2rem);
             clip-path: inset(2rem);
   }
