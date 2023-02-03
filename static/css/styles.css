@@ -69,7 +69,7 @@
   --bs-info-soft: #daf2f8;
   --bs-warning-soft: #f2eee3;
   --bs-danger-soft: #f1e0e3;
-  --bs-primary-rgb: 0, 97, 242;
+  --bs-primary-rgb: 4, 111, 120;
   --bs-secondary-rgb: 105, 0, 199;
   --bs-success-rgb: 0, 172, 105;
   --bs-info-rgb: 0, 207, 213;
@@ -291,7 +291,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #004ec2;
+  color: #085057;
   text-decoration: underline;
 }
 
@@ -20255,5 +20255,151 @@ section {
 @media (min-width: 992px) {
   .divider-right {
     border-right: 0.0625rem solid #e0e5ec;
+  }
+}
+
+.portfolio-item {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  max-width: 530px;
+  margin: auto auto 1rem;
+}
+.portfolio-item .caption {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(33, 37, 41, 0.2);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.portfolio-item .caption .caption-content {
+  color: #fff;
+  margin: auto 2rem 2rem;
+}
+.portfolio-item .caption .caption-content h2, .portfolio-item .caption .caption-content .h2 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.portfolio-item .caption .caption-content p {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+@media (min-width: 992px) {
+  .portfolio-item {
+    max-width: none;
+    margin: 0;
+  }
+  .portfolio-item .caption {
+    transition: background-color 0.7s, -webkit-clip-path 0.25s ease-out;
+    transition: clip-path 0.25s ease-out, background-color 0.7s;
+    transition: clip-path 0.25s ease-out, background-color 0.7s, -webkit-clip-path 0.25s ease-out;
+    -webkit-clip-path: inset(0px);
+            clip-path: inset(0px);
+  }
+  .portfolio-item .caption .caption-content {
+    transition: opacity 0.25s;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-bottom: 5rem;
+  }
+  .portfolio-item img {
+    transition: -webkit-clip-path 0.25s ease-out;
+    transition: clip-path 0.25s ease-out;
+    transition: clip-path 0.25s ease-out, -webkit-clip-path 0.25s ease-out;
+    -webkit-clip-path: inset(-1px);
+            clip-path: inset(-1px);
+  }
+  .portfolio-item:hover img {
+    -webkit-clip-path: inset(2rem);
+            clip-path: inset(2rem);
+  }
+  .portfolio-item:hover .caption {
+    background-color: rgba(8, 80, 87, 0.9);
+    -webkit-clip-path: inset(2rem);
+            clip-path: inset(2rem);
+  }
+}
+
+.highlight1 {
+  background-color: rgba(51, 73, 133, 0.8);
+  padding: 10px;
+}
+
+.highlight2 {
+  background-color: rgba(24, 40, 32, 0.7);
+  padding: 10px;
+}
+
+.highlight3 {
+  background-color: rgba(51, 12, 24, 0.7);
+  padding: 10px;
+}
+
+.highlight4 {
+  background-color: rgba(221, 135, 13, 0.7);
+  padding: 10px;
+}
+
+.slider {
+  background: light;
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: auto;
+}
+
+.slider::before,
+.slider::after {
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+.slider .slide-track {
+  -webkit-animation: scroll 130s linear infinite;
+  animation: scroll 130s linear infinite;
+  display: flex;
+  width: fit-content;
+}
+
+.slider .slide {
+  height: 100px;
+  width: 210px;
+  display: flex;
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
   }
 }
