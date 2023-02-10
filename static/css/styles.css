@@ -20691,13 +20691,15 @@ div.card .card-header-danger {
     }
 }
 
-/* Mobile issue correction */ 
-.container {
-    position: relative;
-    overflow-x: hidden;
-}
+/* Mobile issue correction */
+@media (max-width: 992px) {
+  .container {
+      position: relative;
+      overflow-x: hidden;
+  }
 
-.container-fluid {
-    position: relative;
-    overflow-x: hidden;
+  .container-fluid {
+      position: relative;
+      overflow-x: hidden;
+  }
 }
