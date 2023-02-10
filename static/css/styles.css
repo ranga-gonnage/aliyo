@@ -20690,3 +20690,11 @@ div.card .card-header-danger {
         margin: 20px 20px 0 20px;
     }
 }
+
+
+/* Mobile blank line issue*/
+.container-fluid{
+  padding-left: 0rem;
+  padding-right: 0rem;
+  overflow: hidden;
+}

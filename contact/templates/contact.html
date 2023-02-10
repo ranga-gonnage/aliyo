@@ -5,37 +5,37 @@
 <header class="page-header-ui page-header-light py-lg-5 bg-gradient-primary-to-secondary">
     <div class="page-header-ui-content mt-10">
         <div class="container px-5">
-            <div class="text-center mb-5">
+            <div class="text-center mb-5" data-aos="zoom-in">
                 <h1 class="section-heading text-uppercase text-white">Contactez-Nous</h1>
                 <h2 class="section-subheading text-muted">Posez-nous toutes vos questions, on vous répond !</h2>
             </div>
             <div class="row gx-5 align-items-center">
-                <div class="col-lg-4 d-none d-lg-block"><img class="img-fluid" src="{% static 'assets/img/logos/Aliyo_logo_White.png' %}" /></div>
+                <div class="col-lg-4 d-none d-lg-block" data-aos="zoom-in"><img class="img-fluid" src="{% static 'assets/img/logos/Aliyo_logo_White.png' %}" /></div>
                 <div class="col-lg-8">
                     <form id="contactForm" action="{% url 'contact:contact' %}" method="post">
                     {% csrf_token %}
                     <div class="row align-items-stretch mb-5">
-                        <div class="col-md-6">
+                        <div class="col-md-6" data-aos="fade-right">
                             <div class="form-group">
                                 <!-- Name input-->
                                 <input class="form-control" id="name" type="text" placeholder="Votre Nom *" name="name" required/>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6" data-aos="fade-left">
                             <div class="form-group">
                                 <!-- Email address input-->
                                 <input class="form-control" id="email" type="email" placeholder="Votre Email *" name="email" required/>
                             </div>
                         </div>   
                     </div>
-                    <div class="row align-items-stretch mb-5">
+                    <div class="row align-items-stretch mb-5" data-aos="fade-up">
                         <div class="form-group form-group-textarea">
                             <!-- Message input-->
                             <textarea class="form-control" id="message" placeholder="Votre message *" name="message" required></textarea>
                         </div>
                     </div>
                     <!-- Submit Button-->
-                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase" id="submitButton" type="submit">Envoyer</button></div>
+                    <div class="text-center" data-aos="fade-up"><button class="btn btn-primary btn-xl text-uppercase" id="submitButton" type="submit">Envoyer</button></div>
                 </form>
                 </div>
             </div>
