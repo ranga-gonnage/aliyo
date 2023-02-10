@@ -20691,16 +20691,13 @@ div.card .card-header-danger {
     }
 }
 
-
-/* Mobile blank line issue*/
-.container-fluid{
-  padding-left: 0rem;
-  padding-right: 0rem;
-  overflow: hidden;
+/* Mobile issue correction */ 
+.container {
+    position: relative;
+    overflow-x: hidden;
 }
 
-.container{
-  padding-left: 0rem;
-  padding-right: 0rem;
-  overflow: hidden;
+.container-fluid {
+    position: relative;
+    overflow-x: hidden;
 }
