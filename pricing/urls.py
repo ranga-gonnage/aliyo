@@ -2,7 +2,7 @@ from django.urls import path
 
 from pricing import views
 
-app_name = "home"
+app_name = "pricing"
 urlpatterns = [
-    #path("", views.Home.as_view(), name="home"),
+    path("tarifs/", views.Pricing.as_view(), name="pricing"),
 ]

@@ -1,0 +1,197 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<header class="page-header-ui page-header-ui-dark bg-gradient-primary-to-secondary">
+    <div class="page-header-ui-content pt-10">
+        <div class="container px-5 text-center">
+            <div class="row gx-5 justify-content-center">
+                <div class="col-lg-8">
+                    <h1 class="page-header-ui-title mb-3">Forfaits & Tarifs</h1>
+                    <p class="page-header-ui-text">Des coûts sur mesure pour répondre à vos besoins</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="svg-border-rounded text-light">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.54 17.34" preserveAspectRatio="none" fill="currentColor"><path d="M144.54,17.34H0V0H144.54ZM0,0S32.36,17.34,72.27,17.34,144.54,0,144.54,0"></path></svg>
+    </div>
+</header>
+<section class="pt-5">
+    <div class="pricing1 py-5 bg-light">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 text-center" data-aos="zoom-in">
+            <h2 class="display-6 mt-3 font-weight-medium mb-1">Tarification flexible pour la création de votre site web</h2>
+            <div class="switcher-box mt-4 d-flex align-items-center justify-content-center">
+              <span class="font-14 font-weight-medium">MENSUEL</span>
+              <div class="onoffswitch position-relative mx-2">
+                <input type="checkbox" name="onoffswitch1" class="onoffswitch-checkbox d-none" id="myonoffswitch1">
+                <label class="onoffswitch-label d-block overflow-hidden" for="myonoffswitch1">
+                                <span class="onoffswitch-inner d-block"></span>
+                                <span class="onoffswitch-switch d-block bg-white position-absolute"></span>
+                            </label>
+              </div>
+              <span class="font-14 font-weight-medium">ANNUEL</span>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5" data-aos="fade-up">
+          <!-- Column -->
+          <div class="col-lg-3 col-md-6">
+            <div class="card text-center card-shadow on-hover border-0 mb-4">
+              <div class="card-body font-14">
+                <h5 class="mt-3 mb-1 font-weight-medium">BASIC</h5>
+                <h6 class="subtitle font-weight-normal">For Team of 3-5 Members</h6>
+                <div class="pricing my-3">
+                  <sup>€</sup>
+                  <span class="monthly display-5">24,99</span>
+                  <span class="yearly display-5">21,99</span>
+                  <small class="monthly">/mois</small>
+                  <small class="yearly">/mois</small>
+                  <span class="d-block">Économisez <span class="font-weight-medium">36€</span> par an</span>
+                </div>
+                <ul class="list-inline">
+                  <li class="d-block py-2">Perfect of Small Team</li>
+                  <li class="d-block py-2">Unlimited Invoices</li>
+                  <li class="d-block py-2">Project Management</li>
+                  <li class="d-block py-2">&nbsp;</li>
+                  <li class="d-block py-2">&nbsp;</li>
+                </ul>
+                <p class ="text-muted">Frais de création initiale : 180€</br>
+                Création de maquettes, revues du site, développement du site, déploiement, etc...</p>
+                <div class="bottom-btn">
+                  <a class="btn btn-success-gradiant btn-md text-white btn-block" href="{% url 'contact:contact'%}"><span>Contactez-nous !</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="card text-center card-shadow on-hover border-0 mb-4">
+              <div class="card-body font-14">
+                <span class="badge badge-inverse p-2 position-absolute price-badge font-weight-normal">Populaire</span>
+                <h5 class="mt-3 mb-1 font-weight-medium">PREMIUM</h5>
+                <h6 class="subtitle font-weight-normal">For Team of 5-10 Members</h6>
+                <div class="pricing my-3">
+                  <sup>€</sup>
+                  <span class="monthly display-5">24,99</span>
+                  <span class="yearly display-5">21,99</span>
+                  <small class="monthly">/mois</small>
+                  <small class="yearly">/mois</small>
+                  <span class="d-block">Économisez <span class="font-weight-medium">36€</span> par an</span>
+                </div>
+                <ul class="list-inline">
+                  <li class="d-block py-2">Perfect of Small Team</li>
+                  <li class="d-block py-2">Unlimited Invoices</li>
+                  <li class="d-block py-2">Project Management</li>
+                  <li class="d-block py-2">Team Management</li>
+                  <li class="d-block py-2">&nbsp;</li>
+                </ul>
+                <p class ="text-muted">Frais de création initiale : 180€</br>
+                Création de maquettes, revues du site, développement du site, déploiement, etc...</p>
+                <div class="bottom-btn">
+                  <a class="btn btn-danger-gradiant btn-md text-white btn-block" href="{% url 'contact:contact'%}"><span>Contactez-nous !</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="card text-center card-shadow on-hover border-0 mb-4">
+              <div class="card-body font-14">
+                <h5 class="mt-3 mb-1 font-weight-medium">HIGH CLASS</h5>
+                <h6 class="subtitle font-weight-normal">For Team of 10-25 Members</h6>
+                <div class="pricing my-3">
+                  <sup>€</sup>
+                  <span class="monthly display-5">24,99</span>
+                  <span class="yearly display-5">21,99</span>
+                  <small class="monthly">/mois</small>
+                  <small class="yearly">/mois</small>
+                  <span class="d-block">Économisez <span class="font-weight-medium">36€</span> par an</span>
+                </div>
+                <ul class="list-inline">
+                  <li class="d-block py-2">Perfect of Small Team</li>
+                  <li class="d-block py-2">Unlimited Invoices</li>
+                  <li class="d-block py-2">Project Management</li>
+                  <li class="d-block py-2">Team Management</li>
+                  <li class="d-block py-2">Time Tracking</li>
+                </ul>
+                <p class ="text-muted">Frais de création initiale : 180€</br>
+                Création de maquettes, revues du site, développement du site, déploiement, etc...</p>
+                <div class="bottom-btn">
+                  <a class="btn btn-success-gradiant btn-md text-white btn-block" href="{% url 'contact:contact'%}"><span>Contactez-nous !</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="card text-center card-shadow on-hover border-0 mb-4">
+              <div class="card-body font-14">
+                <h5 class="mt-3 mb-1 font-weight-medium">SUPREME</h5>
+                <h6 class="subtitle font-weight-normal">For Team of 25-100 Members</h6>
+                <div class="pricing my-3">
+                  <sup>€</sup>
+                  <span class="monthly display-5">24,99</span>
+                  <span class="yearly display-5">21,99</span>
+                  <small class="monthly">/mois</small>
+                  <small class="yearly">/mois</small>
+                  <span class="d-block">Économisez <span class="font-weight-medium">36€</span> par an</span>
+                </div>
+                <ul class="list-inline">
+                  <li class="d-block py-2">Perfect of Small Team</li>
+                  <li class="d-block py-2">Unlimited Invoices</li>
+                  <li class="d-block py-2">Project Management</li>
+                  <li class="d-block py-2">Team Management</li>
+                  <li class="d-block py-2">Time Tracking</li>
+                </ul>
+                <p class ="text-muted">Frais de création initiale : 180€</br>
+                Création de maquettes, revues du site, développement du site, déploiement, etc...</p>
+                <div class="bottom-btn">
+                  <a class="btn btn-success-gradiant btn-md text-white btn-block" href="{% url 'contact:contact'%}"><span>Contactez-nous !</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12 col-md-6" data-aos="fade-up">
+            <div class="card text-center card-shadow on-hover border-0 mb-4">
+              <div class="card-body font-14">
+                <h5 class="mt-3 mb-1 font-weight-medium">BASIC</h5>
+                <h6 class="subtitle font-weight-normal">For Team of 3-5 Members</h6>
+                <div class="bottom-btn">
+                  <a class="btn btn-success-gradiant btn-md text-white btn-block" href="{% url 'contact:contact'%}"><span>Je veux un devis !</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="svg-border-rounded text-light">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.54 17.34" preserveAspectRatio="none" fill="currentColor"><path d="M144.54,17.34H0V0H144.54ZM0,0S32.36,17.34,72.27,17.34,144.54,0,144.54,0"></path></svg>
+    </div>
+</section>
+<section>
+    <div class="pricing1 py-5 bg-white">
+      <div class="container">
+        <div class="row justify-content-center"  data-aos="zoom-in">
+          <div class="col-md-8 text-center">
+            <h2 class="display-6 mt-3 font-weight-medium mb-1">Offre personnalisée pour votre application mobile</h2>
+          </div>
+        </div>
+        <div class="col-lg-12 col-md-6"  data-aos="zoom-in">
+            <div class="card text-center card-shadow on-hover border-0 mb-4 bg-dark">
+              <div class="card-body font-14">
+                <h5 class="mt-3 mb-1 font-weight-medium text-white pb-5">DEVIS POUR VOTRE APPLICATION</h5>
+                <p class="text-white">Vous souhaitez développer une application mobile pour votre entreprise? Nous sommes là pour vous aider. Chez Aliyo, nous offrons des solutions de développement d'application mobile sur mesure pour répondre à vos besoins uniques. N'hésitez pas à nous envoyer une demande de devis pour découvrir comment nous pouvons vous aider à réaliser votre projet. Nous sommes à votre disposition pour discuter de vos besoins et vous proposer une solution adaptée à vos objectifs.</p>
+                <div class="bottom-btn">
+                  <a class="btn btn-success-gradiant btn-md text-white btn-block" href="{% url 'contact:contact'%}"><span>Je veux un devis !</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="svg-border-rounded text-light">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.54 17.34" preserveAspectRatio="none" fill="currentColor"><path d="M144.54,17.34H0V0H144.54ZM0,0S32.36,17.34,72.27,17.34,144.54,0,144.54,0"></path></svg>
+    </div>
+</section>
+{% endblock %}

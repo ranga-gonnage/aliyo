@@ -46,5 +46,10 @@
     navbarCollapse();
     // Collapse the navbar when page is scrolled
     document.addEventListener('scroll', navbarCollapse);
-
 });
+
+$(".pricing1 .onoffswitch-label").click(function() {
+    $(".pricing1 .monthly, .pricing1 .yearly").toggle();
+});
+
+
