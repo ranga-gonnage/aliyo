@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block title %}Contactez Aliyo{% endblock title %}
+
 {% block content %}
 <header class="page-header-ui page-header-light py-lg-5 bg-gradient-primary-to-secondary">
     <div class="page-header-ui-content mt-10">
@@ -12,8 +14,14 @@
             <div class="row gx-5 align-items-center">
                 <div class="col-lg-4 d-none d-lg-block" data-aos="zoom-in"><img class="img-fluid" src="{% static 'assets/img/logos/Aliyo_logo_White.png' %}" /></div>
                 <div class="col-lg-8">
+                    {% if messages %}
+                        {% for message in messages %}
+                            <p class="text-white" data-aos="zoom-in"><strong>{{ message }}</strong></p>
+                        {% endfor %}
+                    {% else %}
                     <form id="contactForm" action="{% url 'contact:contact' %}" method="post">
                     {% csrf_token %}
+                    <input type="hidden" name="g-recaptcha-response" id='recaptcha'>
                     <div class="row align-items-stretch mb-5">
                         <div class="col-md-6" data-aos="fade-right">
                             <div class="form-group">
@@ -33,6 +41,7 @@
                     </div>
                     <div class="text-center" data-aos="fade-up"><button class="btn btn-primary btn-xl text-uppercase" id="submitButton" type="submit">Envoyer</button></div>
                 </form>
+                {% endif %}
                 </div>
             </div>
         </div>

@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Multipurpose - SB UI Kit Pro</title>
+        <title>{% block title %}Aliyo - Créer votre site web{% endblock title %}</title>
         <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <link rel="icon" type="image/x-icon" href="{% static 'assets/img/logos/Aliyo_logo_Black.png' %}" />
@@ -15,6 +15,25 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.24.1/feather.min.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <!--Google Recaptcha-->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+
+        <script src="https://www.google.com/recaptcha/api.js?render={{ site_key }}"></script>
+        <script>
+          grecaptcha.ready(function() {
+              $('#contactForm').submit(function(e){
+                  var form = this;
+                  e.preventDefault()
+                  grecaptcha.execute('{{ site_key }}', {action: 'contactform'}).then(function(token) {
+                      $('#recaptcha').val(token)
+                      form.submit()
+                  });
+              })
+
+          });
+        </script>
+        <!--Google Recaptcha END-->
     </head>
     <body>
         <div id="layoutDefault">
@@ -74,7 +93,7 @@
                                         </div>
                                     </li>
                                     <li class="nav-item"><a class="nav-link" href="{% url 'pricing:pricing'%}">Tarifs</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="{% url 'home:home'%}">À propos</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{% url 'contact:about'%}">À propos</a></li>
                                 </ul>
                                 <a class="btn fw-500 ms-lg-4 btn-teal" href="{% url 'contact:contact'%}">
                                     Contactez-nous !
@@ -86,18 +105,18 @@
                     <hr class="m-0" />
                     {% block content %}{% endblock %}
                 </main>
-            </div>        
+            </div>       
             <div id="layoutDefault_footer">
-                <footer class="footer pt-10 pb-5 mt-auto bg-light footer-light">
+                <footer class="footer pt-5 mt-auto bg-light footer-light">
                     <div class="container px-5">
                         <div class="row gx-5">
                             <div class="col-lg-3">
                                 <a class="navbar-brand" href="{% url 'home:home'%}"><img class="img-responsive" src="{% static 'assets/img/logos/Aliyo_full_logo_black.png' %}" width="100px" height="50px"/></a>
                                 <div class="icon-list-social mb-5">
+                                    <a class="icon-list-social-link" href="#!"><i class="fab fa-linkedin"></i></a>
+                                    <a class="icon-list-social-link" href="#!"><i class="fab fa-twitter"></i></a>
                                     <a class="icon-list-social-link" href="#!"><i class="fab fa-instagram"></i></a>
                                     <a class="icon-list-social-link" href="#!"><i class="fab fa-facebook"></i></a>
-                                    <a class="icon-list-social-link" href="#!"><i class="fab fa-github"></i></a>
-                                    <a class="icon-list-social-link" href="#!"><i class="fab fa-twitter"></i></a>
                                 </div>
                             </div>
                             <div class="col-lg-9">
@@ -111,13 +130,13 @@
                                             <li class="mb-2"><a href="{% url 'solutions:website'%}">Créer un site</a></li>
                                             <li class="mb-2"><a href="{% url 'solutions:mobileApp'%}">Créer une application</a></li>
                                             <li class="mb-2"><a href="{% url 'pricing:pricing'%}">Tarifs</a></li>
-                                            <li><a href="#!">À propos</a></li>
+                                            <li><a href="{% url 'contact:about'%}">À propos</a></li>
                                         </ul>
                                     </div>
                                     <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
                                         <div class="text-uppercase-expanded text-xs mb-4">Entreprise</div>
                                         <ul class="list-unstyled mb-0">
-                                            <li class="mb-2"><a href="#!">À propos</a></li>
+                                            <li class="mb-2"><a href="{% url 'contact:about'%}">À propos</a></li>
                                             <li><a href="{% url 'contact:contact'%}">Contact</a></li>
                                         </ul>
                                     </div>
@@ -131,8 +150,8 @@
                                 </div>
                             </div>
                         </div>
-                        <hr class="my-5" />
-                        <div class="row gx-5 align-items-center">
+                        <hr class="my-3" />
+                        <div class="row pb-3 gx-5 align-items-center">
                             <div class="col-md-6 small">Copyright &copy; Aliyo 2023</div>
                             <div class="col-md-6 text-md-end small">
                                 <a href="#!">Mention légale</a>
