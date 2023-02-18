@@ -15,6 +15,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.contrib.sitemaps.views import sitemap
+
+from home.sitemaps import StaticHomeViewSitemap
+from contact.sitemaps import StaticContactViewSitemap
+from pricing.sitemaps import StaticPricingViewSitemap
+from solutions.sitemaps import StaticSolutionsViewSitemap
+
+sitemaps = {
+    'staticHome' : StaticHomeViewSitemap,
+    'staticSolutions' : StaticSolutionsViewSitemap,
+    'staticContact' : StaticContactViewSitemap,
+    'staticPricing' : StaticPricingViewSitemap,
+}
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -22,4 +35,5 @@ urlpatterns = [
     path('', include(('contact.urls', 'home'))),
     path('', include(('solutions.urls', 'home'))),
     path('', include(('pricing.urls', 'home'))),
+    path('sitemap.xml', sitemap, {'sitemaps' : sitemaps}),
 ]
