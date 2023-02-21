@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<header class="page-header-ui page-header-ui-dark bg-gradient-primary-to-secondary">
+    <div class="page-header-ui-content mb-n5 pt-5">
+        <div class="container px-5">
+            <div class="row gx-5 justify-content-center align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h1 class="page-header-ui-title">Hé, où est-ce que vous allez ?</h1>
+                    <p class="page-header-ui-text mb-5">Oops, vous êtes arrivé(e) sur une page qui n'existe pas. Mais ne vous en faites pas, vous pouvez toujours retourner à la page d'accueil pour découvrir nos offres et solutions.</p>
+                    <a class="btn btn-teal fw-500 me-2" href="{% url 'home:home'%}">
+                        Page d'accueil
+                        <i class="ms-2" data-feather="arrow-right"></i>
+                    </a>
+                </div>
+                <div class="col-lg-6 z-1" data-aos="fade-left">
+                    <div class="mx-auto">
+                        <img class="img-fluid z-1" src="{% static 'assets/img/home/404_error.png' %}" alt="Image de l'erreur 404"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="svg-border-rounded text-light">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.54 17.34" preserveAspectRatio="none" fill="currentColor"><path d="M144.54,17.34H0V0H144.54ZM0,0S32.36,17.34,72.27,17.34,144.54,0,144.54,0"></path></svg>
+    </div>
+</header>
+{% endblock %}

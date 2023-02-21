@@ -37,3 +37,5 @@ urlpatterns = [
     path('', include(('pricing.urls', 'home'))),
     path('sitemap.xml', sitemap, {'sitemaps' : sitemaps}),
 ]
+
+handler404 = 'home.views.error_404_view'
