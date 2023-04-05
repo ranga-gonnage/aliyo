@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}{% endblock title %}
+
+{% block description %}{% endblock description %}
+
+{% block content %}
+<header class="page-header-ui page-header-ui-dark bg-gradient-primary-to-secondary">
+    <div class="page-header-ui-content pt-10">
+        <div class="container px-5 text-center">
+            <div class="row gx-5 justify-content-center">
+                <div class="col-lg-8">
+                    <h1 class="page-header-ui-title mb-3">Mentions légales</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="svg-border-rounded text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.54 17.34" preserveAspectRatio="none" fill="currentColor"><path d="M144.54,17.34H0V0H144.54ZM0,0S32.36,17.34,72.27,17.34,144.54,0,144.54,0"></path></svg>
+    </div>
+</header>
+<section class="bg-white py-10">
+    <div class="container px-5">
+        <div class="row gx-5 justify-content-center">
+            <div class="col-lg-10 mt-5">
+                <h1>Mentions légales</h1>
+                <!--<p class="lead">Last updated: January 2020</p>-->
+                <hr class="my-5" />
+                <h2 class="mb-3">1. Edition du site</h2>
+                <p>Le présent site, accessible à l’URL www.aliyo.fr (le « Site »), est édité par :</p>
+                <p>ALIYO, société au capital de 1500 euros, inscrite au R.C.S. de NANTERRE sous le numéro Nanterre B 950 785 782, dont le siège social est situé au 25 RUE DU 19 JANVIER 92380 GARCHES, représenté par Ranga Gonnage & Dylan Francisku dûment habilités</p>
+                <p>Le numéro individuel TVA de l’éditeur est : FR93950785782.</p>
+                <hr class="my-5" />
+                <h2 class="mb-3">2. Hébergement</h2>
+                <p>Le Site est hébergé par la société Heroku, situé The Landmark at One Market, Suite 300, San Francisco, CA 94105, United States, (contact téléphonique ou email : +18662781349).</p>
+                <hr class="my-5" />
+                <h2 class="mb-3">3. Directeur de publication</h2>
+                <p>Le Directeur de la publication du Site est Ranga Gonnage .</p>
+                <hr class="my-5" />
+                <h2 class="mb-3">4. Nous contacter</h2>
+                <p>Par téléphone : +33607895009</p>
+                <p>Par email : contact@aliyo.fr</p>
+                <p>Par courrier : 25 RUE DU 19 JANVIER 92380 GARCHES</p>
+                <hr class="my-5" />
+                <div class="card z-1 mb-n10">
+                    <div class="card-body text-center py-5">
+                        <h2 class="mb-3">Nous sommes là pour vous aider ! </h2>
+                        <a class="btn btn-primary fw-500" href="{% url 'contact:contact'%}">Contactez-nous !</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="svg-border-rounded text-light">
+        <!-- Rounded SVG Border-->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.54 17.34" preserveAspectRatio="none" fill="currentColor"><path d="M144.54,17.34H0V0H144.54ZM0,0S32.36,17.34,72.27,17.34,144.54,0,144.54,0"></path></svg>
+    </div>
+</section>
+
+{% endblock %}

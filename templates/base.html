@@ -75,7 +75,6 @@
                                                     <!--<h6 class="dropdown-header text-primary">Création de contenu</h6>
                                                     <a class="dropdown-item" href="page-careers-overview.html">Création de logo</a>
                                                     <a class="dropdown-item" href="page-careers-listing.html">UX design</a>
-                                                    <a class="dropdown-item" href="page-careers-listing.html">Développement de thème</a>
                                                     <a class="dropdown-item" href="page-careers-listing.html">Rédaction de contenu</a>
                                                     <a class="dropdown-item" href="page-careers-listing.html">Photo & Vidéo professionnelle</a>
                                                     <a class="dropdown-item" href="page-careers-listing.html">Développement de marque</a>
@@ -113,7 +112,6 @@
                                 <a class="navbar-brand" href="{% url 'home:home'%}"><img class="img-responsive" src="{% static 'assets/img/logos/Aliyo_full_logo_black.png' %}" width="100px" height="50px" alt="Logo Aliyo"/></a>
                                 <div class="icon-list-social mb-5">
                                     <a class="icon-list-social-link" href="#!"><i class="fab fa-linkedin"></i></a>
-                                    <a class="icon-list-social-link" href="#!"><i class="fab fa-twitter"></i></a>
                                     <a class="icon-list-social-link" href="#!"><i class="fab fa-instagram"></i></a>
                                     <a class="icon-list-social-link" href="#!"><i class="fab fa-facebook"></i></a>
                                 </div>
@@ -142,8 +140,8 @@
                                     <div class="col-lg-3 col-md-6">
                                         <div class="text-uppercase-expanded text-xs mb-4">Juridique</div>
                                         <ul class="list-unstyled mb-0">
-                                            <li class="mb-2"><a href="#!">Mention légale</a></li>
-                                            <li><a href="#!">Politique de confidentialité</a></li>
+                                            <li class="mb-2"><a href="{% url 'home:legalNotice'%}">Mentions légales</a></li>
+                                            <li><a href="{% url 'home:privacyPolicy'%}">Politique de confidentialité</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -153,9 +151,9 @@
                         <div class="row pb-3 gx-5 align-items-center">
                             <div class="col-md-6 small">Copyright &copy; Aliyo 2023</div>
                             <div class="col-md-6 text-md-end small">
-                                <a href="#!">Mention légale</a>
+                                <a href="{% url 'home:legalNotice'%}">Mentions légales</a>
                                 &middot;
-                                <a href="#!">Politique de confidentialité</a>
+                                <a href="{% url 'home:privacyPolicy'%}">Politique de confidentialité</a>
                             </div>
                         </div>
                     </div>
