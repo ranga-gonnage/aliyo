@@ -49,7 +49,7 @@
 });
 
 $(".pricing1 .onoffswitch-label").click(function() {
-    $(".pricing1 .monthly, .pricing1 .yearly").toggle();
+    $(".pricing1 .yearly, .pricing1 .monthly").toggle();
 });
 
 
